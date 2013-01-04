@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'pry'
+
+Team.delete_all
+Member.delete_all
+
+puts 'Restore factory tables done'
+
+team = ['Arsenal', 'ManU', 'ManC']
+
