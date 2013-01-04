@@ -4,7 +4,25 @@
   <b>Name:</b>
   <%= @team.name %>
 </p>
+	<h1>Listing members</h1>
 
-
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>About</th>
+    <th>Team</th>
+    <th>Members Count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @team.members.each do |member|%>  
+  	<tr>
+			<%= render partial: 'members/member_info', locals: { member: member}%>
+		</tr>
+	<% end -%>
+</table>
+<%= link_to 'New Member', new_member_path %> | 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>

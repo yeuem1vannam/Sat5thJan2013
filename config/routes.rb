@@ -1,4 +1,6 @@
 Sat5thJan2013::Application.routes.draw do
+  root to: 'teams#index'
+
   get "teams/index"
 
   get "teams/show"
