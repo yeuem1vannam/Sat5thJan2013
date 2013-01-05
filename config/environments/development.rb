@@ -13,7 +13,6 @@ Sat5thJan2013::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
   # Set CaheDigests recomputed the digest on each change of template
-  # CacheDigests::TemplateDigestor.cache = ActiveSupport::Cache::NullStore.new
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
