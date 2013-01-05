@@ -17,12 +17,17 @@
     <th></th>
     <th></th>
   </tr>
-  <% @team.members.each do |member|%>  
+<% cache @team do %>
+  <% @team.members.each do |member|%>
   	<tr>
 			<%= render partial: 'members/member_info', locals: { member: member}%>
 		</tr>
-	<% end -%>
+  <% end -%>
+<% end %>
+
+
+
 </table>
-<%= link_to 'New Member', new_member_path %> | 
+<%= link_to 'New Member', new_member_path %> |
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
