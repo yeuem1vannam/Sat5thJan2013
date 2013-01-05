@@ -17,13 +17,14 @@
     <th></th>
     <th></th>
   </tr>
-  <%# cache ["v1", @team] do %>
+  <!-- Start Caching -->
   <% @team.members.each do |member|%>
+    <% cache ["v1", member] do %>
   	<tr>
 			<%= render partial: 'members/member_info', locals: { member: member}%>
-		</tr>
+    </tr>
+    <% end %>
 	<% end -%>
-  <%# end %>
 </table>
 <%= link_to 'New Member', new_member_path %> |
 <%= link_to 'Edit', edit_team_path(@team) %> |

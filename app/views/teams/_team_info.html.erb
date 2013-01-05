@@ -1,5 +1,9 @@
-<%# cache ["v1", team] do %>
+ <% cache ["v1", team] do %>
 	<td><%= team.name%></td>
-	<td><%= team.members.count%></td>
-	<td>Flag</td>
-<%# end -%>
+  <td><%= team.members.count%></td>
+  <td>
+    **************<br />
+    *&nbsp; &nbsp; &nbsp;Flag US&nbsp;&nbsp;&nbsp;&nbsp;*<br />
+    **************
+  </td>
+  <% end -%>

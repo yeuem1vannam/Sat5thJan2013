@@ -1,11 +1,11 @@
-<%# cache ["v1", member] do %>
   <td><%= member.firstname + ' ' + member.lastname %></td>
   <td><%= member.age %></td>
   <td><%= member.about %></td>
-  <%= render partial: 'teams/team_info', locals: {team: member.team}%>
+  <% cache ["v1", member.team] do %>
+    <%= render partial: 'teams/team_info', locals: {team: member.team}%>
+  <% end%>
   <td><%= link_to 'Show', member %></td>
   <td><%= link_to 'Edit', edit_member_path(member) %></td>
   <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   <br />
-<%# end -%>
 
