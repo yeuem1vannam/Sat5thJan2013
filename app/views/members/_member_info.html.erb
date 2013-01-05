@@ -1,4 +1,4 @@
-<% cache ["v1", member] do %>
+<%# cache ["v1", member] do %>
   <td><%= member.firstname + ' ' + member.lastname %></td>
   <td><%= member.age %></td>
   <td><%= member.about %></td>
@@ -7,5 +7,5 @@
   <td><%= link_to 'Edit', edit_member_path(member) %></td>
   <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   <br />
-<% end -%>
+<%# end -%>
 
