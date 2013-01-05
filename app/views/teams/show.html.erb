@@ -17,13 +17,14 @@
     <th></th>
     <th></th>
   </tr>
-<% cache @team do %>
+  <!-- Start Caching -->
   <% @team.members.each do |member|%>
+    <% cache member do %>
   	<tr>
 			<%= render partial: 'members/member_info', locals: { member: member}%>
 		</tr>
-  <% end -%>
-<% end %>
+    <% end  %>
+  <% end %>
 
 
 
