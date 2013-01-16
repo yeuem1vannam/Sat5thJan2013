@@ -2,7 +2,7 @@
   <td><%= member.firstname + ' ' + member.lastname %></td>
   <td><%= member.age %></td>
   <td><%= member.about %></td>
-  <% cache member.team do%>
+  <% cache member do%>
     <%= render partial: 'teams/team_info', locals: {team: member.team}%>
   <% end %>
   <td><%= link_to 'Show', member %></td>

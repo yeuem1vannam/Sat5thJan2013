@@ -18,7 +18,7 @@
     <th></th>
   </tr>
   <!-- Start Caching -->
-  <% cache @team.members do %>
+  <% cache @team do %>
   <% @team.members.each do |member|%>
   	<tr>
 			<%= render partial: 'members/member_info', locals: { member: member}%>
